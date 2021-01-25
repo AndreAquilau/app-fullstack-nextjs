@@ -7,3 +7,7 @@
 
 #### NextAuth.js Authentication for Next.js
 [NextAuth.js](https://next-auth.js.org/)
+
+
+#### References
+[Tutorial NextJS Fullstack #1](https://www.youtube.com/watch?v=MeYibJFi7p0)
