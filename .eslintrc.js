@@ -35,6 +35,10 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
-    '@typescript-eslint/no-empty-interface': 'off'
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-console': 'off',
+    'no-plusplus': 'off',
+    '@typescript-eslint/no-unused-vars': 'off'
   },
 };
