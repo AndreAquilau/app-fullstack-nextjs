@@ -78,20 +78,17 @@ TYPEORM_SUBESCRIBERS_DIR =
 >ormconfig.js
 ```js
 module.exports = {
-  type: process.env.TYPEORM_CONNECTION,
+  type: 'postgres',
   url: process.env.DATABASE_URL,
-  schema: process.env.TYPEORM_SCHEMA,
-  synchronize: process.env.TYPEORM_SYNCHRONIZE,
-  logging: process.env.TYPEORM_LOGGING,
-  entities: [process.env.TYPEORM_ENTITIES || 'dist/models/**/*.js'],
-  migrations: [
-    process.env.TYPEORM_MIGRATIONS || 'dist/database/migrations/**/*.js',
-  ],
-  subscribers: [process.env.TYPEORM_SUBSCRIBERS || 'dist/subscriber/**/*.js'],
+  synchronize: false,
+  logging: false,
+  entities: [process.env.TYPEORM_ENTITIES],
+  migrations: [process.env.TYPEORM_MIGRATIONS],
+  subscribers: [process.env.TYPEORM_SUBESCRIBERS],
   cli: {
-    entitiesDir: process.env.TYPEORM_ENTITIES_DIR,
-    migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
-    subscribersDir: process.env.TYPEORM_SUBSCRIBERS_DIR,
+      entitiesDir: process.env.TYPEORM_ENTITIES_DIR,
+      migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
+      subscribersDir: process.env.TYPEORM_SUBESCRIBERS_DIR,
   },
 };
 ```
